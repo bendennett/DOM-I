@@ -50,6 +50,25 @@ atags[3].textContent = "Features";
 atags[4].textContent = "About";
 atags[5].textContent = "Contact";
 
+atags.forEach(element => {
+  element.style.color = 'green'
+})
+
+const last = document.createElement('a');
+last.textContent = "Maps";
+
+const parentElement = document.querySelector('nav');
+parentElement.appendChild(last);
+
+const first = document.createElement('a');
+first.textContent = "Accomplishments";
+
+parentElement.prepend(first);
+
+first.style.color = 'crimson';
+last.style.color = 'crimson';
+
+
 const middlehead = document.querySelectorAll('h4');
 
 middlehead[0].textContent = "FEATURES";
@@ -71,6 +90,11 @@ bodytext[6].textContent = "1 (888) 888-8888";
 bodytext[7].textContent = "sales@greatidea.io";
 bodytext[8].textContent = "Copyright Great Idea! 2018";
 
+const bighead = document.querySelector('h1');
+bighead.textContent = "DOM Is Awesome";
+
+const buttontext = document.querySelector(".cta-text button");
+buttontext.textContent = "Get Started";
 
 let biglogo = document.getElementById("cta-img");
 biglogo.setAttribute('src', "img/header-img.png")
